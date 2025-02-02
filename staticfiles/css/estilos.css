@@ -1,0 +1,9 @@
+body {
+    background-color: #ffffff; /* Cor de fundo branca */
+    color: #000000; /* Cor do texto preta */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #000000; /* Cor dos links preta */
+}

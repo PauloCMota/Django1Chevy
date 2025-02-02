@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .produto-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .produto-container h2 {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .produto-detalhes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 18px;
+        }
+        .produto-detalhes span {
+            font-weight: bold;
+        }
+        .produto-detalhes div {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detalhes do Produto</h1>
+    <div class="produto-container">
+        <h2>{{ produto.nome }}</h2>
+        <div class="produto-detalhes">
+            <div>
+                <span>Preço:</span>
+                <span>R$ {{ produto.preco }}</span>
+            </div>
+            <div>
+                <span>Estoque:</span>
+                <span>{{ produto.estoque }} unidades</span>
+            </div>
+        </div>
+        <a href="{% url 'index' %}">Voltar para a página inicial</a>
+    </div>
+</body>
+</html>
