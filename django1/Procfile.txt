@@ -1,1 +1,2 @@
-web:gunicorn django1Chevy-wsgi --log-file-
+web: gunicorn django1.wsgi:application --log-file -
+
